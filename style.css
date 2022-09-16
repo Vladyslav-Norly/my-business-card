@@ -1,0 +1,491 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My code */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	display: grid;
+	grid-template-columns: 300px auto;
+	line-height: 20px;
+	max-width: 1980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.basic-aside {
+	background-color: rgba(130, 130, 130, 0.8);
+	color: white;
+}
+
+.first-el {
+	display: flex;
+}
+
+.first-el > img {
+	margin: 20px 0 0 20px;
+	border-radius: 20px;
+	width: 195px; 
+	height: 240px;
+	
+}
+
+.social-bottoms {
+	margin: auto;
+}
+
+.social-bottoms li {
+	list-style: none;
+}
+
+.social-bottoms a {
+	display: block;
+	margin-top: 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.social-lk {
+	background: url("images/sprite.png") no-repeat -205px -5px;
+}
+
+.social-lk:hover {
+	background: url("images/sprite.png") no-repeat -45px -5px;
+	transform: scale(1.2); 
+}
+
+.social-gt {
+	background: url("images/sprite.png") no-repeat -165px -5px;
+}
+
+.social-gt:hover { 
+	background: url("images/sprite.png") no-repeat -125px -5px;
+	transform: scale(1.2);
+}
+
+.contact {
+	display: inline-block;
+	width: 80%;
+	/*font-size: 0.9vmax !important;*/
+	margin: 20px 10% 10px 10%;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 0;
+}
+.contact li {
+	list-style: none;
+	margin: 3% 0;
+}
+
+.contact li:hover {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.number:before {
+	content: "";
+	display: inline-block;
+	margin: 0 10px -10px 0; 
+	width: 30px;
+	height: 30px;
+	background: url("images/sprite.png") no-repeat -245px -5px;
+}
+
+.email:before {
+	content: "";
+	display: inline-block;
+	margin: 0 10px -10px 0;
+	width: 30px;
+	height: 30px;
+	background: url("images/sprite.png") no-repeat -85px -5px;
+}
+
+.skype:before {
+	content: "";
+	display: inline-block;
+	margin: 0 10px -10px 0;
+	width: 30px;
+	height: 30px;
+	background: url("images/sprite.png") no-repeat -5px -5px;
+}
+
+.skills-name {
+	font-family: Helvetica;
+	padding-left: 15%;
+	font-size: 1.4em;
+	text-shadow:
+    1px 1px rgba(130, 130, 130, 0.8),
+    2px 2px black;
+}
+.Skills {
+	margin: 0 30px;
+}
+.skill-name {
+	margin: 8px 0;
+}
+.skill-bar {
+	height: 8px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: white;
+}
+.skill-bar:last-child {
+	margin-bottom: 10px;
+}
+.skill-per {
+	height: 8px;
+	background-color: black;
+	border-radius: 3px;
+	position: relative;
+	animation: Fillbar 2.5s 1;
+}
+.skill-per::before {
+	content: attr(per);
+	position: absolute;
+	border-radius: 3px;
+	height: 18px;
+	padding: 0 2px;
+	font-size: 10px;
+	font-weight: 700;
+	top: -28px;
+	right: 0;
+	transform: translateX(50%);
+	background-color: white;
+	color: black;
+}
+.skill-per::after {
+	content: "";
+	position: absolute;
+	background-color: white;
+	width: 5px;
+	height: 5px;
+	top: -13px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+	border-radius: 1px;
+}
+@keyframes Fillbar {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.skills-list {
+	margin: 0 10% 0 10%;
+	border-bottom: 2px solid black;
+	padding-bottom: 15px;
+	text-shadow:
+    1px 1px rgba(130, 130, 130, 0.8),
+    2px 2px black;
+}
+
+.skills-list li {
+	list-style: disc;
+	margin: 10px 0 0 15px;
+}
+
+.basic-main {
+	display: grid;
+	grid-template-columns: 45% 55%;
+	grid-template-rows: auto auto auto;
+	border-right: 15px solid rgba(130, 130, 130, 0.8);
+	border-top: 15px solid rgba(130, 130, 130, 0.8);
+	border-bottom: 15px solid rgba(130, 130, 130, 0.8);
+}
+
+.my-name {
+	font-family: Helvetica;
+	grid-column: 1 / 3;
+	grid-row: 1/2;
+	margin: 2% 0 2% 3.5%;
+	font-size: 3em;
+	text-decoration: underline;
+}
+
+h2 {
+	font-family: Helvetica;
+	font-weight: 700;
+	font-size: 1.4em;
+	margin-bottom: 3%;
+}
+
+.about {
+	grid-column: 1 / 2;
+	grid-row: 2/3;
+	padding: 3% 7% 0 7%;
+	text-align: justify;
+	text-indent: 24px;
+}
+
+.education {
+	grid-column: 1 / 2;
+	grid-row: 3/4;
+	padding: 0 7% 0 7%;
+}
+
+.my-work {
+	grid-column: 2/3;
+	grid-row: 2/4;
+	padding: 3% 7% 0 7%;
+	box-shadow: 
+	-10px 0 10px -15px rgb(130, 130, 130),
+	-15px 0 10px -15px rgb(0, 0, 0)
+	;
+}
+
+.first-list > li {
+	margin-bottom: 15px;
+}
+
+.second-list {
+	padding-left: 50px; 
+	padding-top: 2%;
+	list-style: disc;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: 700;
+	color: black;
+	text-decoration: underline;
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 1280px) {
+	body {
+	display: flex;
+	flex-direction: column;
+	font-size: 25px;
+	line-height: 40px;
+	}
+	.basic-aside {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: auto auto auto;
+	overflow: hidden;
+	}
+	.first-el > img {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	border-radius: 20px;
+	width: 308px; 
+	height: 379px;
+	z-index: 1;
+	}
+	.contact {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	border: none;
+	margin: 5% 0 5% 5%;
+	padding-left: 5%;
+	border-left: 2px solid black;
+	}
+	.contact li {
+	margin-top: 5%;
+	font-size: 25px;
+	}
+	.all-skills {
+		grid-column: 1/2;
+	grid-row: 1/4;
+	}
+	.skills-name::before {
+	content: "Vladyslav Nelipa";
+	display: block;
+	text-decoration: underline;
+	font-size: 6vw;
+	font-family: Helvetica;
+	padding: 5% 0 5% 10%;
+	margin-bottom: 5%;
+	margin-left: -20%;
+	margin-right: -100%;
+	font-weight: bold;
+	background-color: black;
+	}
+	.skills-name {
+		margin: 0;
+	font-size: 4vw;
+	padding-left: 12%;
+
+	}
+	.skills-list {
+	border-bottom: none;
+	font-size: 3vw;
+	line-height: 30px;
+	}
+	.Skills {
+		margin: 0 25px 30px 25px;
+	}
+	.skill-per::before {
+		height: auto;
+		top: -50px;
+	}
+	.basic-main {
+	border-top: none;
+	border-left: 15px solid rgb(130, 130, 130, 0.8);
+	grid-template-columns: 50% 50%;
+	}
+	.my-name {
+	display: none;
+	}
+	.about {
+	grid-column: 1/3;
+	grid-row: 2/3;
+	padding: 15px 5% 5% 5%;
+	box-shadow: 
+	0 10px 10px -15px rgb(130, 130, 130),
+	0 15px 10px -15px rgb(0, 0, 0)
+	;
+	}
+	.education {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	padding: 5% 5% 0 10%;
+	}
+	.my-work {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	padding: 5% 5% 5% 10%;
+	}
+	h2 {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	}
+}
+@media only screen and (max-device-width: 480px) {
+	body {
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	}
+	.basic-aside {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: auto auto auto;
+	overflow: hidden;
+	}
+	.first-el > img {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	border-radius: 20px;
+	width: 292px; 
+	height: 360px;
+	z-index: 1;
+	}
+	.contact {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	border: none;
+	margin: 10% 0 5% 5%;
+	padding-left: 5%;
+	border-left: 2px solid black;
+	}
+	.contact li {
+	margin-top: 5%;
+	font-size: 25px;
+	}
+	.all-skills {
+		grid-column: 1/2;
+	grid-row: 1/4;
+	}
+	.skills-name::before {
+	content: "Vladyslav Nelipa";
+	display: block;
+	text-decoration: underline;
+	font-size: 4vw;
+	font-family: Helvetica;
+	padding: 5% 0 5% 10%;
+	margin-bottom: 5%;
+	margin-left: -20%;
+	margin-right: -100%;
+	font-weight: bold;
+	background-color: black;
+	}
+	.skills-name {
+	padding-left: 12%;
+	}
+	.skills-list {
+	border-bottom: none;
+	font-size: 1.1vw;
+	}
+	.Skills {
+		margin: 0 25px 30px 25px;
+	}
+	.skill-name {
+		font-size: 1vw;
+	}
+
+	.basic-main {
+	border-top: none;
+	border-left: 15px solid rgb(130, 130, 130, 0.8);
+	grid-template-columns: 50% 50%;
+	}
+	.my-name {
+	display: none;
+	}
+	.about {
+	grid-column: 1/3;
+	grid-row: 2/3;
+	padding: 15px 5% 5% 5%;
+	box-shadow: 
+	0 10px 10px -15px rgb(130, 130, 130),
+	0 15px 10px -15px rgb(0, 0, 0)
+	;
+	}
+	.education {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	padding: 5% 5% 0 10%;
+	}
+	.my-work {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	padding: 5% 5% 5% 10%;
+	}
+	h2 {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	}
+}
